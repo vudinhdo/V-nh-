@@ -7,6 +7,184 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Do shop</title>
     <link rel="stylesheet" href="asset/css/dostyle.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Roboto+Flex:opsz@8..144&display=swap');
+        *{
+            font-family: 'Open Sans', sans-serif;
+            box-sizing: border-box;
+            padding: 0;
+            margin:0;
+            font-weight: 300;
+        }
+        .container{
+            width: 70%;
+        }
+        .col-1{
+            width: 33.3%;
+        }
+        .padding-50px{
+            padding: 50px;
+        }
+        .space-y-56px{
+            margin-top: 28px;
+            margin-bottom:28px;
+        }
+        .btn{
+            outline: none;
+            border:none;
+            padding: 12px 25px;
+            cursor: pointer;
+            color: white;
+            font-weight: 600;
+            border-radius: 26px;
+        }
+        .btn-info{
+            background-color:#2369ec ;
+        }
+        .margin-auto{
+            margin: auto;
+        }
+        .flex-row {
+            display: flex;
+        }
+        .justify-center{
+            justify-content: center;
+        }
+        .align-center{
+            align-items: center;
+        }
+        .justify-between{
+            justify-content: space-between;
+        }
+        .list-style-none{
+            list-style: none!important;
+        }
+        /*body{*/
+        /*    background-color: #1b1e21;*/
+        /*    color: white;*/
+        /*}*/
+        .header-content{
+            text-align: center;
+        }
+        .font{
+            font-style: italic;
+        }
+        img{
+            width: 35px;
+            height: 35px;
+        }
+        /*.boder-button{*/
+        /*    !*background-color: black;*!*/
+        /*    border-bottom-color: white;*/
+        /*}*/
+        /*.rounded{*/
+        /*    border-radius: 25px;*/
+        /*}*/
+        /*.box{*/
+        /*    padding: 30px;*/
+        /*    border-radius: 25px;*/
+        /*    background-color: black;*/
+        /*    border-color: #e83e8c;*/
+        /*}*/
+
+        /*.flex-container {*/
+        /*    display: flex;*/
+        /*    justify-content: space-around;*/
+        /*}*/
+        .text-light{
+            color: white;
+        }
+        /*.box-started{*/
+        /*    background-color: #007bff;*/
+        /*    border-radius: 25px;*/
+        /*    color: white;*/
+        /*    padding-top: 10px;*/
+        /*    padding-bottom: 10px;*/
+        /*}*/
+        .font-weight-bold{
+            font-weight: 900!important;
+        }
+        /*.box-st{*/
+        /*    background-color: #007bff;*/
+        /*    border-radius: 25px;*/
+        /*    color: white;*/
+        /*    padding: 15px;*/
+        /*}*/
+        .letter-spacing{
+            letter-spacing: 2px;
+        }
+        .next-icon{
+            width: 16px;
+            height: 16px;
+            margin: 0 0 0 12px;
+        }
+        .space-y-24px{
+            margin-top: 12px;
+            margin-bottom:12px;
+        }
+        .space-y-40px{
+            margin-top: 20px;
+            margin-bottom:20px;
+        }
+        .font-size-36px{
+            font-size: 36px;
+        }
+        /*.w-100{*/
+        /*    width: 100%;*/
+        /*}*/
+        .flex-row .item{
+            margin:0 16px;
+        }
+        .justify-end{
+            justify-content: end;
+        }
+        .justify-start{
+            justify-content: start;
+        }
+        .list-app-item{
+            cursor: pointer;
+            width: 20%;
+            display: flex;
+            flex-direction: column;
+            align-content: center;
+            align-items: center;
+            position: relative;
+            justify-content: center;
+            padding: 26px 0!important;
+            border:1px solid #3b3b3b;
+            border-radius: 16px;
+        }
+        .list-app-item .list-app-selector{
+            content: '';
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            border:1px solid #3b3b3b;
+            position: absolute;
+            top:10px;
+            right: 10px;
+            cursor: pointer;
+        }
+        .list-app-item img{
+            margin: 0 0 12px 0;
+        }
+        .list-app-item strong{
+            font-family: 'Roboto Flex', sans-serif;
+            font-size: 12px;
+        }
+        .check-icon{
+            width: 12px;
+            height: 12px;
+        }
+        .active .list-app-selector{
+            background-color: white;
+        }
+        .active{
+            border: 1px solid  #16a9ca;
+        }
+    </style>
 </head>
 <body style="background: black" class="text-light">
     <div class="container margin-auto">
