@@ -1,0 +1,125 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Do shop</title>
+    <link rel="stylesheet" href="asset/css/dostyle.css">
+</head>
+<body style="background: black" class="text-light">
+    <div class="container margin-auto">
+        <header>
+            <nav class="top-navbar flex-row justify-between align-center">
+                <ul class="flex-row list-style-none justify-start align-center col-1">
+                    <li>
+                        <a href="#">
+                            <img class="logo" src="asset/inmage/new-moon.png" alt=".." />
+                        </a>
+                    </li>
+                </ul>
+
+                <ul class="flex-row justify-center list-style-none align-center col-1">
+                    <li>
+                        <h5 class="letter-spacing padding-50px">Product . Resources . Our Work</h5>
+                    </li>
+                </ul>
+                <ul class="flex-row justify-end align-center list-style-none col-1" style="line-height: 100%">
+                    <li style="padding-right: 30px"><h5>FAQ</h5></li>
+                    <li style="padding-right: 20px"> <button type="button" class="btn btn-info flex-row justify-center align-center"> Get Started <img class="next-icon" src="asset/inmage/next.png" alt=""/> </button></li>
+                </ul>
+            </nav>
+            <div class="header-content space-y-56px">
+                <p>- API INTERGRAYTION -</p>
+                <h1 class="space-y-40px font-weight-bold font-size-36px">The Essential API that help</h1>
+                <h1 class="font space-y-40px"> - manage projects - </h1>
+                <h5 class="space-y-24px letter-spacing">a platform delivering ultra-fast , dynamic & persionalised project experriences </h5>
+            </div>
+            <br>
+        </header>
+        <section class="flex-row justify-between align-center space-y-56px">
+            <div class="list-app-item item active">
+                <img src="asset/inmage/img_1.png" alt="">
+                <strong>Filebox</strong>
+                <span class="list-app-selector"></span>
+            </div>
+
+            <div class="list-app-item item">
+                <img src="asset/inmage/img_4.png" alt="">
+                <strong>Simple Poll</strong>
+                <span class="list-app-selector"></span>
+            </div>
+            <div class="list-app-item item">
+                <img src="asset/inmage/img_5.png" alt="">
+                <strong>Messages</strong>
+                <span class="list-app-selector"></span>
+            </div>
+            <div class="list-app-item item">
+                <img src="asset/inmage/img_6.png" alt="">
+                <strong>Documents</strong>
+                <span class="list-app-selector"></span>
+            </div>
+            <div class="list-app-item item">
+                <img src="asset/inmage/img_7.png" alt="">
+                <strong>Notes</strong>
+                <span class="list-app-selector"></span>
+            </div>
+        </section>
+        <br>
+        <br>
+        <div class="flex-row align-center justify-center">
+            <a href="#">
+                <button type="button" class="btn btn-info flex-row justify-center align-center"> Get Started <img class="next-icon" src="asset/inmage/next.png" alt=""/> </button>
+            </a>
+        </div>
+
+        <footer class="space-y-40px flex-row justify-center align-center">
+            <h5 class="letter-spacing padding-50px font-weight-bold"><img src="asset/inmage/check.png" class="check-icon" alt=""> Free Signup</h5>
+            <h5 class="letter-spacing padding-50px font-weight-bold"><img src="asset/inmage/check.png" class="check-icon" alt=""> No Credit Requirement</h5>
+            <h5 class="letter-spacing padding-50px font-weight-bold"><img src="asset/inmage/check.png" class="check-icon" alt=""> Free Signup</h5>
+        </footer>
+    </div>
+    <script>
+        const removeActive = ()=>{
+            Array.from(document.querySelectorAll('.list-app-item')).forEach((val)=>{
+                if (val.classList.contains('active')){
+                    val.classList.remove('active')
+                }
+            })
+        }
+        const handleSelectAppChild = (event)=>{
+                let parentEl = event.target.parentElement
+
+                if (!parentEl.classList.contains('active')){
+                    // remove active
+                    removeActive()
+                    parentEl.classList.add('active')
+                }
+
+        }
+        const handleSelectApp = (event)=>{
+            let el = event.target
+            let isChild = false;
+            if (el.parentElement.classList.contains('list-app-item')){
+                isChild = true
+            }
+            if (!el.classList.contains('active')){
+                removeActive()
+                if (!isChild){
+                    el.classList.add('active')
+                }else {
+                    el.parentElement.classList.add('active')
+                }
+            }
+        }
+        let listApp = document.querySelectorAll('.list-app-item .list-app-selector')
+        // Array.from(listApp).forEach((val)=>{
+        //     val.addEventListener('click',handleSelectAppChild)
+        // })
+        Array.from(document.querySelectorAll('.list-app-item')).forEach((val)=>{
+            val.addEventListener('click',handleSelectApp)
+        })
+    </script>
+</body>
+</html>
